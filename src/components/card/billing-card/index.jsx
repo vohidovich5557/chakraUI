@@ -1,6 +1,6 @@
 import React from "react";
 import { useDeletBilling } from "../../../pages/billing/service/mutation/useDeletBilling";
-import { toast } from "react-toastify";
+import { toast } from "sonner";
 import { queryclient } from "../../../config/queryclient";
 
 export const BillingCard = ({ companyname, name, vatnumber, email, id }) => {
@@ -8,7 +8,7 @@ export const BillingCard = ({ companyname, name, vatnumber, email, id }) => {
   const deletItem = () => {
     mutate(id, {
       onSuccess: () => {
-        toast.success("successfully deleted");
+        toast.info("successfully deleted");
         queryclient.invalidateQueries({ queryKey: ["get-billing"] });
       },
     });
@@ -45,7 +45,6 @@ export const BillingCard = ({ companyname, name, vatnumber, email, id }) => {
             <p className="text-sm font-normal text-gray-400">Number:</p>
             <h2 className="text-sm font-bold text-gray-700">{vatnumber}</h2>
           </div>
-          
         </div>
       </div>
     </>

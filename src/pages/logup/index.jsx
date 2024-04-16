@@ -3,7 +3,7 @@ import logo from "../../assets/logup-img/logo-black.svg";
 import { HomeBlack } from "../../assets/logup-img/home-black";
 import { ProfileBlack } from "../../assets/logup-img/profile-black";
 import { SignIn } from "../../assets/logup-img/signin-black";
-import bgImg from "../../assets/logup-img/bg-img.svg";
+import { BgImg } from "../../assets/logup-img/bg-img.jsx";
 import { useForm } from "react-hook-form";
 import { SignUp } from "../../assets/logup-img/singup-black";
 import { Input } from "../../pages/login/components/ui/input";
@@ -67,11 +67,9 @@ export const LogUp = () => {
             <button className="text-white font-bold">Free Download</button>
           </div>
         </div>
-        <img
-          src={bgImg}
-          alt="img"
-          className=" absolute -z-10 top-0 right-0 mt-[-24px]"
-        />
+        <div className=" absolute -z-10 top-0 right-0 mt-[-24px]">
+          <BgImg />
+        </div>
         <div className="w-[353px] h-[445px]  ml-[200px] mt-[180px]">
           <form
             onSubmit={handleSubmit(submit)}

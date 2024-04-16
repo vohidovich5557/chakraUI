@@ -1,14 +1,14 @@
 import React from "react";
 import { useDeletPro } from "../../../pages/tables/service/mutation/useDeletPro";
 import { queryclient } from "../../../config/queryclient";
-import { toast } from "react-toastify";
+import { toast } from "sonner";
 
 export const ProjectCard = ({ companies, budget, status, completion, id }) => {
   const { mutate, isPending } = useDeletPro();
   const deletItem = () => {
     mutate(id, {
       onSuccess: () => {
-        toast.success("successfully deleted");
+        toast.info("successfully deleted");
         queryclient.invalidateQueries({ queryKey: ["get-projects"] });
       },
     });

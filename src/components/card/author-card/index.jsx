@@ -1,6 +1,6 @@
 import React from "react";
 import { useDeletTables } from "../../../pages/tables/service/mutation/useDeletTables";
-import { toast } from "react-toastify";
+import { toast } from "sonner";
 import { queryclient } from "../../../config/queryclient";
 
 export const AuthorCard = ({
@@ -17,7 +17,7 @@ export const AuthorCard = ({
   const deletItem = () => {
     mutate(id, {
       onSuccess: () => {
-        toast.success("successfully deleted");
+        toast.info("successfully deleted");
         queryclient.invalidateQueries({ queryKey: ["get-tables"] });
       },
     });
@@ -27,8 +27,7 @@ export const AuthorCard = ({
       <div className="w-[1102px] h-auto">
         <div className="w-full h-[1px] bg-gray-300"></div>
         <div className="flex items-center ml-[5px] mb-[10px] mt-[11px]">
-          <div className="w-[45px] mr-[40px] h-[40px]  rounded-[10px]">
-          </div>
+          <div className="w-[45px] mr-[40px] h-[40px]  rounded-[10px]"></div>
           <div className="flex  w-[170px] mr-[116px] flex-col items-start">
             <h2 className="text-sm font-bold text-gray-700 mb-[4px]">{name}</h2>
             <p className="text-sm font-normal text-gray-500">{email}</p>

@@ -2,7 +2,7 @@ import React from "react";
 import { Input } from "../../components/ui/input";
 import { usePostPro } from "./service/mutation/usePostPro";
 import { useForm } from "react-hook-form";
-import { toast } from "react-toastify";
+import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
 
 export const Projects = () => {

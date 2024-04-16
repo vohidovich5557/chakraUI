@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { usePostTables } from "./service/mutation/usePostTables";
 import { Input } from "../../components/ui/input";
-import { toast } from "react-toastify";
+import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
 import { PlusOutlined } from "@ant-design/icons";
 import { Upload, Form } from "antd";

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { usePostBilling } from "./service/mutation/usePostBilling";
 import { Input } from "../../components/ui/input";
-import { toast } from "react-toastify";
+import { toast } from "sonner";
 
 export const BillingCreate = () => {
   const { mutate, isPending } = usePostBilling();
