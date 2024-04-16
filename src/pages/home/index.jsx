@@ -12,6 +12,7 @@ import { Graph } from "../../assets/home-img/graph";
 import { Items } from "../../assets/home-img/items";
 import { ChakraImg } from "../../assets/home-img/chakra-img";
 import { CheckedIcon } from "../../assets/home-img/checked-icon";
+import { HomeGroup } from "../../assets/home-img/home-group";
 import { useGetProjects } from "../tables/service/query/useGetProjects";
 
 export const Home = () => {
@@ -95,12 +96,10 @@ export const Home = () => {
               <ChakraImg className="rounded-[20px]" />
             </div>
           </div>
-          <div className="w-[529px] relative pt-[17.5px] pb-[17.5px] pl-[17.5px] pr-[17.5px] h-[290px] bg-white rounded-[15px]">
-            <img
-              src={BannerImg}
-              alt="img"
-              className=" absolute -z-10 w-[100%] h-[100%]"
-            />
+          <div className="w-[529px] pl-[10px]  pb-[17.5px] pt-[15px] pr-[10px] h-[290px] bg-white rounded-[15px]">
+            <div className=" rounded-[20px] overflow-hidden">
+              <HomeGroup />
+            </div>
           </div>
         </div>
         <div className="flex items-center mb-[24px] gap-[24px]">
@@ -186,8 +185,10 @@ export const Home = () => {
               <CheckedIcon />
             </div>
             <p className="text-sm font-normal text-gray-400">
-              <span className="text-sm font-bold text-gray-500">{data?.length}</span> done
-              this month
+              <span className="text-sm font-bold text-gray-500">
+                {data?.length}
+              </span>{" "}
+              done this month
             </p>
           </div>
           <div className="flex flex-col items-center">
