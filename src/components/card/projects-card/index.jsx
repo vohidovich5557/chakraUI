@@ -2,6 +2,7 @@ import React from "react";
 import { useDeletPro } from "../../../pages/tables/service/mutation/useDeletPro";
 import { queryclient } from "../../../config/queryclient";
 import { toast } from "sonner";
+import { Link } from "react-router-dom";
 
 export const ProjectCard = ({ companies, budget, status, completion, id }) => {
   const { mutate, isPending } = useDeletPro();
@@ -19,9 +20,11 @@ export const ProjectCard = ({ companies, budget, status, completion, id }) => {
         <div className="w-[1110px] h-[1px] bg-gray-400"></div>
         <div className="w-[1110px]  flex items-center ml-[5px] mb-[5px]  py-[20px]">
           <div className="flex  items-center mr-[70px] gap-[17px]">
-            <h2 className="text-sm font-bold text-blue-700 w-[151px]">
-              {companies}
-            </h2>
+            <Link to={`/app/tables/group/${id}`}>
+              <h2 className="text-sm font-bold text-blue-700 w-[151px]">
+                {companies}
+              </h2>
+            </Link>
           </div>
           <div className="mr-[180px]  w-[150px] text-center ">
             <p className="font-bold text-sm text-gray-700">{budget}</p>
@@ -38,7 +41,9 @@ export const ProjectCard = ({ companies, budget, status, completion, id }) => {
             </div>
           </div>
           <div className="flex items-center gap-[10px]">
-            <button className="text-md font-bold text-gray-400">Edit</button>
+           <Link to={`/app/tables/proedit/${id}`}>
+           <button className="text-md font-bold text-gray-400">Edit</button>
+           </Link>
             <button
               className="text-md font-bold text-red-400"
               onClick={deletItem}

@@ -2,7 +2,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 const request = axios.create({
-  baseURL: "https://server-8t53.onrender.com/",
+  baseURL: "http://localhost:3000/",
 });
 
 export { request };

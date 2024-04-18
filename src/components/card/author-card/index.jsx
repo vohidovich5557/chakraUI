@@ -1,6 +1,7 @@
 import React from "react";
 import { useDeletTables } from "../../../pages/tables/service/mutation/useDeletTables";
 import { toast } from "sonner";
+import { Link } from "react-router-dom";
 import { queryclient } from "../../../config/queryclient";
 
 export const AuthorCard = ({
@@ -51,7 +52,9 @@ export const AuthorCard = ({
             <p className="text-sm font-bold text-gray-700">{employed}</p>
           </div>
           <div className="flex items-center gap-[20px]">
-            <button className="text-sm font-bold text-gray-400">Edit</button>
+           <Link to={`/app/tables/edit/${id}`}>
+           <button className="text-sm font-bold text-gray-400">Edit</button>
+           </Link>
             <button
               className="text-sm font-bold text-red-400"
               onClick={deletItem}

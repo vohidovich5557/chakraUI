@@ -9,6 +9,9 @@ import { Projects } from "./pages/projects";
 import { BillingCreate } from "./pages/billing-create";
 import { Tables } from "./pages/tables";
 import { Billing } from "./pages/billing";
+import { TablesEdit } from "./pages/tables-edit";
+import { ProjectEdit } from "./pages/project-edit";
+import { ProjectsGroup } from "./pages/projects-group";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
           <Route path="tables" element={<Tables />} />
           <Route path="tables/create" element={<TablesCreate />} />
           <Route path="tables/projects" element={<Projects />} />
+          <Route path="tables/group/:id" element={<ProjectsGroup />} />
+          <Route path="tables/edit/:id" element={<TablesEdit />} />
+          <Route path="tables/proedit/:id" element={<ProjectEdit />} />
           <Route path="billing" element={<Billing />} />
           <Route path="billing/create" element={<BillingCreate />} />
           <Route path="profile" element={<Profile />} />

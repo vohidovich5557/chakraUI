@@ -9,8 +9,6 @@ import bgImg from "../../assets/tables-img/bg-img.svg";
 export const Tables = () => {
   const { data, isLoading } = useGetTables();
   const { data: data2, isLoading: isLoading2 } = useGetProjects();
-  console.log(data);
-  console.log(data2);
   return (
     <>
       {data?.length > 0 ? (
